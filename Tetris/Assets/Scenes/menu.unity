@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 36611868}
   - component: {fileID: 36611867}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,12 +203,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: df9b6372d4fb335c6bd17568726db124, type: 3}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1555776700}
+        m_MethodName: ChangeTheme
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 36611867}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 231507584}
   - component: {fileID: 231507583}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Geometry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -679,7 +679,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 231507584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1555776700}
+        m_MethodName: ChangeTheme
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 231507583}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &231507584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,6 +995,37 @@ RectTransform:
   m_AnchoredPosition: {x: 598.5, y: 266}
   m_SizeDelta: {x: 1197, y: 532}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &426573038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 426573039}
+  m_Layer: 0
+  m_Name: RecordObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &426573039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426573038}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -593.4459, y: -265.70996, z: -145.25703}
+  m_LocalScale: {x: 0.69264066, y: 0.69264066, z: 0.69264066}
+  m_Children:
+  - {fileID: 701414899}
+  m_Father: {fileID: 1555776699}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &525731441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,15 +1505,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701414898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1.44375, y: 1.44375, z: 1.44375}
   m_Children: []
-  m_Father: {fileID: 1555776699}
+  m_Father: {fileID: 426573039}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 206.73996, y: 102.52002}
+  m_AnchoredPosition: {x: 150, y: 531.632}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701414900
@@ -1505,7 +1547,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Current record:'
+  m_Text: 'Current record: 0'
 --- !u!222 &701414901
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3205,7 +3247,7 @@ GameObject:
   - component: {fileID: 1371736093}
   - component: {fileID: 1371736092}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Sea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3273,7 +3315,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1371736093}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1555776700}
+        m_MethodName: ChangeTheme
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1371736092}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1371736093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3359,7 +3412,7 @@ GameObject:
   - component: {fileID: 1428324731}
   - component: {fileID: 1428324730}
   m_Layer: 5
-  m_Name: Button
+  m_Name: City
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3427,7 +3480,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1428324731}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1555776700}
+        m_MethodName: ChangeTheme
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1428324730}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1428324731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3784,7 +3848,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 701414899}
+  - {fileID: 426573039}
   - {fileID: 1799008988}
   - {fileID: 1941843423}
   - {fileID: 183174548}
@@ -3809,6 +3873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b36080fb2778e34e9226759b5255cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theme: 1
 --- !u!1 &1593880187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3822,7 +3887,7 @@ GameObject:
   - component: {fileID: 1593880190}
   - component: {fileID: 1593880189}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Sakura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3890,7 +3955,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1593880190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1555776700}
+        m_MethodName: ChangeTheme
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1593880189}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1593880190
 MonoBehaviour:
   m_ObjectHideFlags: 0

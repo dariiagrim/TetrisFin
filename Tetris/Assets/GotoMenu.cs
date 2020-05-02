@@ -10,6 +10,6 @@ public class GotoMenu : MonoBehaviour
     {
         ScoreScript.scoreValue = -10;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
     }
 }

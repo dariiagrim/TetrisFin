@@ -2,17 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuControls : MonoBehaviour
 {
-  public void PlayGame()
+    public string theme = "GeometryScene";
+    void Start() 
+    { 
+        if (PlayerPrefs.HasKey("highScore")) 
+            GameObject.Find("RecordObj").GetComponentInChildren<Text>().text = "Current record: " + PlayerPrefs.GetInt("highScore");
+    }
+    public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-      
+        Debug.Log(theme);
+        SceneManager.LoadScene(theme);
+        
     }
 
-   public void QuitGame()
+    public void QuitGame()
     {
         Application.Quit();
     }
+
+    public void ChangeTheme(Button button)
+    {
+       theme = button.name + "Scene"; 
+    }
+
 }
