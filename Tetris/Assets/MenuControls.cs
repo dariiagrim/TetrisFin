@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuControls : MonoBehaviour
 {
     public string theme = "GeometryScene";
+    public Button[] buttons;
     void Start() 
     { 
         if (PlayerPrefs.HasKey("highScore")) 
@@ -27,6 +28,17 @@ public class MenuControls : MonoBehaviour
     public void ChangeTheme(Button button)
     {
        theme = button.name + "Scene"; 
+       ButtonsGrey();
+    }
+
+    public void ButtonsGrey()
+    {
+        foreach (Button button in buttons)
+        {
+            var color = button.colors;
+            color.normalColor = Color.grey;
+            button.colors = color;
+        }
     }
 
 }
