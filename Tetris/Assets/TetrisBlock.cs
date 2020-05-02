@@ -59,6 +59,13 @@ public class TetrisBlock : MonoBehaviour
                     
                    
                 }
+                else
+                {
+                    Time.timeScale = 0;
+                    Record();
+                    Debug.Log( PlayerPrefs.GetInt("highScore"));
+
+                }
             }
             previousTime = Time.time;
         }
@@ -72,6 +79,7 @@ public class TetrisBlock : MonoBehaviour
             {
                 DeleteLine(i);
                 RowDown(i);
+                ScoreScript.scoreValue += 100;
             }
         }
     }
@@ -138,7 +146,7 @@ public class TetrisBlock : MonoBehaviour
         return true;
     }
 
-        bool EndGame() {
+    bool EndGame() {
         foreach (Transform children in transform)
         {
             int y = Mathf.RoundToInt(children.transform.position.y);
@@ -148,4 +156,25 @@ public class TetrisBlock : MonoBehaviour
         }    
         return false; 
    }
+
+   void Record()
+   {
+       int myScore =  ScoreScript.scoreValue;
+       if (PlayerPrefs.HasKey("highScore"))
+       {
+            if (PlayerPrefs.GetInt("highScore") < myScore)
+            {
+
+                PlayerPrefs.SetInt("highScore", myScore);
+            }    
+       }
+       else
+       {
+           PlayerPrefs.SetInt("highScore", myScore);
+       }
+       
+
+   }
+    
+        
 }
